@@ -15,7 +15,8 @@
         "pages": [
           "index",
           "quickstart",
-          "my-first-mintlify-web"
+          "my-first-mintlify-web",
+          "learn-gitflow"
         ]
       }
     ],

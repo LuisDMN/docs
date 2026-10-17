@@ -1,0 +1,51 @@
+---
+title: "Learn-GitFlow"
+description: "Qué hace la página web del repositorio Learn-GitFlow, cómo usarla y qué funciones contiene script.js."
+---
+
+## Qué hace la página web
+
+Learn-GitFlow es una aplicación web básica (título del documento: "Mi App Web Básica") formada por tres archivos:
+
+- `index.html`: estructura de la página.
+- `script.js`: comportamiento interactivo.
+- `style.css`: estilos visuales.
+
+La página muestra:
+
+- Varios encabezados `<h1>` con textos como "Hola Christian", "Suscríbete a la Tecnología Avanza", "Aprende DevOps con La Tecnologia Avanaza", "Luis Diego Montiel Nuñez" y "High quality".
+- Un botón **Haz clic aquí** que muestra un mensaje al pulsarlo.
+- Un formulario de contacto con los campos **Nombre** y **Email**, y un botón **Enviar** que muestra en la página los datos introducidos.
+
+Los estilos usan la fuente Arial, centran el contenido, dan color `#333` a los encabezados y `#555` a los mensajes de salida (`#output` y `#formOutput`).
+
+<Warning>
+  `index.html` enlaza la hoja de estilos como `styles.css`, pero el archivo del repositorio se llama `style.css`. Con los nombres actuales, los estilos no se cargan.
+</Warning>
+
+## Cómo usarla
+
+<Steps>
+  <Step title="Abre la página">
+    Abre `index.html` en un navegador web. El archivo carga `script.js` al final del `<body>`.
+  </Step>
+  <Step title="Pulsa el botón">
+    Haz clic en **Haz clic aquí**. Debajo del botón aparece el texto `¡Botón clicado!`.
+  </Step>
+  <Step title="Envía el formulario">
+    Escribe tu nombre y tu email y pulsa **Enviar**. La página no se recarga; en su lugar, debajo del formulario aparece el texto `Nombre: <nombre>, Email: <email>`.
+  </Step>
+</Steps>
+
+<Note>
+  El formulario no envía datos a ningún servidor. Solo muestra los valores en la propia página.
+</Note>
+
+## Funciones de script.js
+
+`script.js` no declara funciones con nombre. Contiene dos funciones anónimas registradas como manejadores de eventos con `addEventListener`.
+
+| Nombre | Qué hace | Qué devuelve |
+| --- | --- | --- |
+| Función anónima del evento `click` en `#btnClick` | Escribe `¡Botón clicado!` en el párrafo `#output`. | Nada (`undefined`). |
+| Función anónima del evento `submit` en `#contactForm` (recibe `event`) | Llama a `event.preventDefault()` para evitar la recarga, lee los valores de `#name` y `#email`, y escribe `Nombre: <nombre>, Email: <email>` en el párrafo `#formOutput`. | Nada (`undefined`). |
